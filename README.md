@@ -15,7 +15,7 @@ Metacharacters:
 | *  | Zero or more occurrences |
 | +  | One or more occurences |
 | ? | Zero or one occurences |
-| {n} | Exactly n occurrences |
+| {n},{m,n} | Exactly n occurrences, m to n recurrences, respectively |
 | \| | Exclusive or |
 
 Special Sequences: 
@@ -46,12 +46,18 @@ Sets: [01234] returns a match when any of the contents are present.
 
 re.MatchObject.group() returns the matched subgroup. group(n) will return the nth group (1-indexed), with group(0) being the whole group and NOT the first subgroup.
 
+backslash \\ can screw up python syntax, so if its causing issues turn the string to a raw string literal (prefix the string with r, so like r"\\n" will be two characters, "\\" and "n" instead of the newline.)
+
 def get_title(name):
     title_search = re.search(' ([A-Za-z]+)\.', name)
     # If the title exists, extract and return it.
     if title_search:
         return title_search.group(1)
     return ""
+
+detailed documention:
+
+https://docs.python.org/3/library/re.html
 
 ##pandas syntax
 
