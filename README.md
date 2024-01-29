@@ -63,4 +63,6 @@ https://docs.python.org/3/library/re.html
 
 df.apply() - applies a function along an axis of the dataframe (default 0). docs here https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html
 
+df.loc[] - accesses a group of rows and columns by labels? usage unclear
+
 
