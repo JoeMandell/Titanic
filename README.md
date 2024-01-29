@@ -1,10 +1,10 @@
-Syntax:
+# Syntax for the project:
 
-##regular expressions
+## regular expressions
 `import re``
 more info: https://www.w3schools.com/python/python_regex.asp
 
-Metacharacters:
+#### Metacharacters:
 
 | character | meaning |
 |--------- | -------- |
@@ -18,7 +18,7 @@ Metacharacters:
 | {n},{m,n} | Exactly n occurrences, m to n recurrences, respectively |
 | \| | Exclusive or |
 
-Special Sequences: 
+#### Special Sequences: 
 (for \\b and \\B, put it at the beginning or end of the string depending on where you want to check for the characters)
 | character | meaning |
 | --------- | ------- |
@@ -34,7 +34,7 @@ Special Sequences:
 | \\Z | returns match if preceding characers are at end of the string|
 
 
-
+#### Other
 
 Use backslashes \\ to escape one of the above metacharacters.
 
@@ -59,7 +59,7 @@ detailed documention:
 
 https://docs.python.org/3/library/re.html
 
-##pandas syntax
+## pandas syntax
 
 df.apply() - applies a function along an axis of the dataframe (default 0). docs here https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html
 
