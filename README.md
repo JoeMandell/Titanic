@@ -65,4 +65,14 @@ df.apply() - applies a function along an axis of the dataframe (default 0). docs
 
 df.loc[] - accesses a group of rows and columns by labels? usage unclear
 
+## Issues I ran into / Things I learned
 
+- the variable you assign a pandas series to is just a pointer, and I got these mixed up a lot. Takeaway: always know where each pointer is pointing, and use deep copies whenever you want a copy rather than a pointer
+
+- Modularization is awesome - ensure that helper functions don't over-rely on state variables outside of themselves. If you're mutating an object, pass it in explicitly and return it. If you need more than one return, package them as a tuple and return that. 
+
+- Question for the future - is the above mindset wasteful of compute and memory? passing in mutable objects and stuff explicitly is far easier for me to wrap my head around, but does it take more space or time than local functions modifying state variables around them?
+
+- the "with" syntax in python will close files automatically
+
+- Can use snyk.io to find new packages
